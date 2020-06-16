@@ -33,12 +33,14 @@
             "name" : "gnome-tour",
             "buildsystem" : "meson",
             "config-opts" : [
-                "-Dprofile=development"
+                "-Dprofile=development",
+                "-Ddistro_name=Endless OS",
+                "-Ddistro_version=3.8"
             ],
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/bilelmoussaoui/gnome-tour.git"
+                    "type" : "dir",
+                    "path": ".."
                 }
             ]
         }

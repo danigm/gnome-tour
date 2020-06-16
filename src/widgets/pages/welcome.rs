@@ -22,7 +22,7 @@ impl WelcomePageWidget {
         self.widget.set_margin_top(24);
         self.widget.set_margin_bottom(24);
 
-        let logo = gtk::Image::new_from_icon_name(Some(config::DISTRO_ICON_NAME), gtk::IconSize::Dialog);
+        let logo = gtk::Image::new_from_resource("/org/gnome/Tour/eos/logo.svg");
         logo.set_pixel_size(196);
         self.widget.add(&logo);
 
@@ -31,7 +31,7 @@ impl WelcomePageWidget {
         title.get_style_context().add_class("large-title");
         self.widget.add(&title);
 
-        let text = gtk::Label::new(Some(&gettext("Hi there! If you are new to GNOME, you can take the tour to learn some essential features.")));
+        let text = gtk::Label::new(Some(&gettext("Hi there! If you are new to Endless OS, you can take the tour to learn some essential features.")));
         text.get_style_context().add_class("body");
         text.set_margin_top(12);
         self.widget.add(&text);

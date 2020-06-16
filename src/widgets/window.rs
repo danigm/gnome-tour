@@ -90,34 +90,35 @@ impl Window {
         self.container.add_named(&welcome_page.widget, "welcome");
 
         self.paginator.add_page(Box::new(ImagePageWidget::new(
-            "/org/gnome/Tour/activities.svg",
-            gettext("Activities Overview"),
-            gettext("Open Activities to start apps"),
-            gettext("You can also view open windows, search and use workspaces."),
-        )));
-
-        self.paginator.add_page(Box::new(ImagePageWidget::new(
-            "/org/gnome/Tour/search.svg",
+            "/org/gnome/Tour/eos/search.svg",
             gettext("Search"),
-            gettext("In the Activities Overview, just start typing to search"),
+            gettext("In the desktop, just start typing to search"),
             gettext("Search can be used to launch apps, find settings, do calculations and much more."),
         )));
 
         self.paginator.add_page(Box::new(ImagePageWidget::new(
-            "/org/gnome/Tour/calendar.svg",
+            "/org/gnome/Tour/eos/calendar.svg",
             gettext("Date & Time"),
             gettext("Click the time to see your now and next"),
             gettext("This includes notifications, media controls, calendar events, the weather and world clocks."),
         )));
 
         self.paginator.add_page(Box::new(ImagePageWidget::new(
-            "/org/gnome/Tour/status-menu.svg",
+            "/org/gnome/Tour/eos/status-menu.svg",
             gettext("System Menu"),
-            gettext("View system information and settings"),
-            gettext("Get an overview of the system status and quickly change settings."),
+            gettext("View system information"),
+            gettext("Get an overview of the system status."),
         )));
+
         self.paginator.add_page(Box::new(ImagePageWidget::new(
-            "/org/gnome/Tour/software.svg",
+            "/org/gnome/Tour/eos/user-menu.svg",
+            gettext("User Menu"),
+            gettext("View user information"),
+            gettext("Get an overview of the user session, power off, logout, and change settings."),
+        )));
+
+        self.paginator.add_page(Box::new(ImagePageWidget::new(
+            "/org/gnome/Tour/eos/software.svg",
             gettext("Software"),
             gettext("Find and install apps"),
             gettext("The Software app makes it easy to find and install all the apps you need."),
